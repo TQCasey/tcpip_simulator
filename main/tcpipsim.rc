@@ -1,0 +1,232 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TCPIPSIM            ICON    DISCARDABLE     "tcpipsim.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_TCPIPSIM MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Start",                      IDM_START
+        MENUITEM "S&top",                       IDM_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "&Netcard config ...",         IDM_NETCARD
+        MENUITEM "&Interface config ...",       IDM_INTERFACE
+        MENUITEM "&Route config ...",           IDM_ROUTE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About TCP/IP simulator...",  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_TCPIPSIM ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 263, 76
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About TCP/IP simulator"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_TCPIPSIM,IDC_MYICON,14,9,20,20
+    LTEXT           "tcpipsim Version 1.0",IDC_VERSION,49,10,142,58,
+                    SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,220,6,30,11,WS_GROUP
+END
+
+IDD_NETCARD DIALOG DISCARDABLE  0, 0, 256, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Netcard Config"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,63,46,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,136,46,50,14
+    COMBOBOX        IDC_NETCARD,48,15,194,58,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Netcard:",IDC_STATIC,14,17,28,8
+END
+
+IDD_INTERFACE DIALOG DISCARDABLE  0, 0, 252, 168
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Interface config"
+FONT 10, "System"
+BEGIN
+    COMBOBOX        IDC_INTERFACE,52,17,132,54,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_IPADDRESS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    WS_BORDER | WS_TABSTOP,32,60,141,65
+    PUSHBUTTON      "&Add",IDC_ADDRADD,43,132,37,14
+    PUSHBUTTON      "&Delete",IDC_ADDRDEL,119,132,37,14
+    DEFPUSHBUTTON   "OK",IDOK,195,7,50,14
+    LTEXT           "Interface:",IDC_STATIC,16,18,31,8
+    GROUPBOX        "IP Address",IDC_STATIC,19,42,165,111
+END
+
+IDD_IPADDRADD DIALOG DISCARDABLE  0, 0, 203, 98
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "IP Address Add"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_ADDRESS,74,15,105,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NETMASK,74,37,105,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,33,66,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,109,66,50,14
+    LTEXT           "IP Address:",IDC_STATIC,17,16,38,8
+    LTEXT           "Netmask:",IDC_STATIC,17,40,32,8
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_NETCARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_INTERFACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_IPADDRADD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "toolbar.bmp"
+IDB_TOOLBARDIS          BITMAP  DISCARDABLE     "toolbardis.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "BSD TCP/IP simulator"
+    IDC_TCPIPSIM            "TCPIPSIM"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
